@@ -28,6 +28,7 @@ def hyp_dist(u, v):
     delta = torch.mul(torch.pow(torch.dist(u, v), 2), 2.) / torch.mul(u_norm, v_norm)
 
     hyper_dist = arcosh(1 + delta)
+    
     assert hyper_dist.size() == (1, 1)
     return hyper_dist
 
